@@ -311,6 +311,9 @@ print(List_Only_Negative_Strands)
 #print(List_Only_Positive_Strands.dtypes)
 #print(concatenate_columns.dtypes)
 List_Only_Negative_Strands.to_csv('Statistics_Negative_Strands.csv', sep='\t')
+Filtered_Statistics_Negative_Strand_List = List_Only_Negative_Strands.loc[List_Only_Negative_Strands['Plus_Strands'] == 0]
+print(Filtered_Statistics_Negative_Strand_List)
+Filtered_Statistics_Negative_Strand_List.to_csv('Statistics_Remaining_Negative_Strands.csv', sep='\t')
 # Done, 11/3/2024, now I have to filter List_Only_Negative_Strands by Plus_Strands = 0, 
 # And then I'll have stats for both + and - strands. Test on Mar 12, run on SAP1, SAP2 res, and then 
 
