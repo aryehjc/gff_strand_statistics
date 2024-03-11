@@ -5,14 +5,14 @@ import numpy as np
 # run these on sap1 and sap2 resistant, feb 28 2023
 #run sed '/##FASTA/,$d' test.gff > out.gff and sed '/^##/d' out.gff > out.csv in bash
 #this is an example, change it later to run on gffs for RN4220, S1 S2..etc
-#with open('/home/aryeh/Smooth_Rough_2024/Finished/13r-LFB6378-RL1_L2_1and2/spades/PROKKA_01172024/out.csv', 'r') as f:
+#with open('out.csv', 'r') as f:
 #    data=f.read().replace('\n', ' ')
 #Reads the CSV and counts number of + strands.. (lines with + and are going to be in updated_plus_strands_list later)..CHANGE THIS LATER
 #data.split(' ').count("+")
 #print('Number of forward strands:')
 #print(data.count("+"))
 
-Annot = pd.read_csv("/home/aryeh/Smooth_Rough_2024/Finished/13r-LFB6378-RL1_L2_1and2/spades/PROKKA_01172024/out.csv", sep='\t', header=None)
+Annot = pd.read_csv("out.csv", sep='\t', header=None) # Follow above steps to convert .gff to .csv, and insert as input file here. (out.csv)
 Annot.columns = ["Node", "Predictor", "GeneType", "BasePairStart", "BasePairEnd", ".", "Strand", "0", "Annotation"]
 print(Annot)
 #(1): After I run sed '/##FASTA/,$d' test.gff > out.gff and sed '/^##/d' out.gff > out.csv in bash, make a dataframe Annot out of the .csv file with columns according to the descriptors.
