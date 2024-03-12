@@ -209,7 +209,7 @@ TotalStrands_List_2.columns = ["Node", "Total_Strands"]
 minus_strands = (Annot_New.loc[Annot_New['Strand'] == "-", 'Node'].value_counts())
 print(minus_strands)
 minus_strands.to_csv('minus_strands_list.csv', sep='\t')
-MinusStrands_List = pd.read_csv("only_minus_strands_list.csv", skiprows = 1, sep='\t', header=None) #correct
+MinusStrands_List = pd.read_csv("minus_strands_list.csv", skiprows = 1, sep='\t', header=None) #correct
 MinusStrands_List.columns = ["Node", "Minus_Strands"]
 MinusStrands_List.to_csv('updated_minus_strands_list.csv', sep='\t') #correct
 
