@@ -11,6 +11,8 @@ import numpy as np
 #data.split(' ').count("+")
 #print('Number of forward strands:')
 #print(data.count("+"))
+# If there is an issue with tab separation and you obtain the wrong value or a blank CSV, fix it by copypasting columns directly into input csv file below.
+# /home/aryeh/Staphylococcus_Aureus_Assembly_Amended_Params/ASSEMBLIES_DEC_2023/SAP1_Resistant/Final_Contigs/spades_output_directory/Final_SPADES_SA_Annotation_Contigs_2023/out.csv
 
 Annot = pd.read_csv("out.csv", sep='\t', header=None) # Follow above steps to convert .gff to .csv, and insert as input file here. (out.csv)
 Annot.columns = ["Node", "Predictor", "GeneType", "BasePairStart", "BasePairEnd", ".", "Strand", "0", "Annotation"]
